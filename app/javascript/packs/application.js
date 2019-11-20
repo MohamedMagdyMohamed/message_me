@@ -15,3 +15,9 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+// loads jquery
+//= require jquery
+
+// Loads all Semantic javascripts
+//= require semantic-ui
