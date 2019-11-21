@@ -7,7 +7,12 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require('jquery')
+require("packs/semantic")
 
+
+import JQuery from 'jquery';
+window.$ = window.jQuery = JQuery;
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -18,6 +23,12 @@ require("channels")
 
 // loads jquery
 //= require jquery
+//= require jquery_ujs
 
 // Loads all Semantic javascripts
 //= require semantic-ui
+
+
+$(document).on('turbolinks:load', function(){
+    $('.ui.dropdown').dropdown("clear");
+})

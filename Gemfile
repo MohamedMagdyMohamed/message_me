@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 
 # gem for semantic ui
 gem 'semantic-ui-sass'
+gem 'semantic-ui-rails'
 
 # gem for jquery
 gem 'jquery-rails'
