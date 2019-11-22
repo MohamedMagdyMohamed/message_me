@@ -28,15 +28,16 @@ window.$ = window.jQuery = JQuery;
 // Loads all Semantic javascripts
 //= require semantic-ui
 
+function scroll_bottom() {
+    if ($('#messages').length > 0) {
+        $('#messages').scrollTop($('#messages')[0].scrollHeight);
+    }
+}
 
 $(document).on('turbolinks:load', function(){
     $('.ui.dropdown').dropdown("clear");
-    $('.message .close')
-  .on('click', function() {
-    $(this)
-      .closest('.message')
-      .transition('fade')
-    ;
-  })
-;
+    $('.message .close').on('click', function() {
+        $(this).closest('.message').transition('fade');
+    });
+    scroll_bottom();
 })
