@@ -31,4 +31,12 @@ window.$ = window.jQuery = JQuery;
 
 $(document).on('turbolinks:load', function(){
     $('.ui.dropdown').dropdown("clear");
+    $('.message .close')
+  .on('click', function() {
+    $(this)
+      .closest('.message')
+      .transition('fade')
+    ;
+  })
+;
 })
