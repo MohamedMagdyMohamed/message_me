@@ -34,10 +34,23 @@ function scroll_bottom() {
     }
 }
 
+function submit_message() {
+    $('input[type=text]').on('keydown', function(e) {
+        if (e.which == 13) {
+            // e.preventDefault();
+            $('button').click();
+            e.target.value = "";
+        }
+    });
+};
+
+
+
 $(document).on('turbolinks:load', function(){
     $('.ui.dropdown').dropdown("clear");
     $('.message .close').on('click', function() {
         $(this).closest('.message').transition('fade');
     });
+    submit_message();
     scroll_bottom();
 })
